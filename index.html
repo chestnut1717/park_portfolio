@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Park's Page</title>
+  <meta name="description" content="Portfolio for Park">
+  <meta name="author" content="Park">
+
+  <!-- Fontawesome and Google Font -->
+  <script src="https://kit.fontawesome.com/d35c02c6a4.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Andada+Pro:ital,wght@0,400;0,700;1,500&display=swap" rel="stylesheet">
+  
+  
+  <!-- favicon and files -->
+  <link rel="icon" type="image/png" href="image/icon/favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="main.js"></script>
+
+</head>
+<body>
+  <!-- navbar -->
+  <nav id="navbar">
+    <div class="navbar__logo">
+      <i class="fab fa-diaspora"></i>
+      <a href="#">Park</a>
+    </div>
+    <ul class="navbar__menu">
+      <li class="navbar__menu__item">Home</li>
+      <li class="navbar__menu__item">About</li>
+      <li class="navbar__menu__item">Skills</li>
+      <li class="navbar__menu__item">My Work</li>
+      <li class="navbar__menu__item">Awards</li>
+      <li class="navbar__menu__item">Contact</li>
+    </ul>
+  </nav>
+
+  <!-- Home -->
+  <section id="home">
+      <div class="home__container">
+        <div class="home__profile">
+          <img src="image/Bunny1.jpg" alt="">
+        </div>
+        <div class="home__text">
+          <h3>I'm owner</h3>
+        </div>
+      </div>
+      <div class="home__contact">CONTACT ME</div>
+  </section>
+
+  <!-- About Me -->
+  <section id="about" class="section__container">
+    <h1>About Me</h1>
+    <div class="about__text">
+      ㄴㅇㄻㄴㅇㄻㅇㄻ<br>
+      work__categorieser<br>
+      wer
+    </div>
+
+    <div class="about__majors">
+      <div class="major">
+          <div class="major__icon">
+            <i class="fas fa-chart-bar"></i>
+          </div>
+          <h2 class="major__title">Data Analysis</h2>
+          <p class="major__description">Visualization, Statistical Analysis, <br>Machine Learning</p>
+      </div>
+      
+      <div class="major">
+          <div class="major__icon">
+            <i class="fab fa-html5"></i>
+          </div>
+          <h2 class="major__title">Front-End</h2>
+          <p class="major__description">Simple Website with <br>HTML/CSS/JS</p>
+      </div>
+
+      <div class="major">
+          <div class="major__icon">
+            <i class="fas fa-server"></i>
+          </div>
+          <h2 class="major__title">Back-End</h2>
+          <p class="major__description">Learning to build <br> Server, DB with Spring Boot</p>
+      </div>
+  </div>
+
+    <div class="about__career">
+      <div class="career__container">
+        <img class="career__img" src="image/logos/logos-univ.png" alt="#">
+        <div class="career__detail">
+          <p class="career__title">HUFS IEL / SW&AI Undergraduate</p>
+          <p class="career__date">2017.2 ~ Until Now</p>
+        </div>
+      </div>
+      <div class="career__container">
+        <img class="career__img" src="image/logos/logos-likelion.png" alt="#">
+        <div class="career__detail">
+          <p class="career__title">Gwangju AI School</p>
+          <p class="career__date">2021.4 ~ 2021.12</p>
+        </div>
+      </div>
+
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section__container">
+    <h1>Skills</h1>
+
+    <div class="skillset">
+      <div class="skillset__skills">
+        <ul class="skill__menu">
+          <li class="skill__menu__item active" data-filter="Lang">Language</li>
+          <li class="skill__menu__item" data-filter="Analysis">Data Analysis</li>
+          <li class="skill__menu__item" data-filter="Front">Front-End</li>
+          <li class="skill__menu__item" data-filter="Back">Back-End</li>
+        </ul>
+
+
+        <div class="skill__graph">
+
+          <div class="skill default" data-type="Lang">
+            <div class="skill__description">
+              <span>Python</span>
+              <span>89%</span>
+            </div>
+            <div class="skill__bar">
+              <div class="value" style="width: 89%; height: 5px;"></div>
+            </div>
+          </div>
+ 
+          <div class="skill default" data-type="Lang">
+            <div class="skill__description">
+              <span>Java</span>
+              <span>65%</span>
+            </div>
+            <div class="skill__bar">
+              <div class="value" style="width: 65%; height: 5px;"></div>
+            </div>
+          </div>
+
+          <div class="skill" data-type="Analysis">
+            <div class="skill__description">
+              <span>Pandas</span>
+              <span>75%</span>
+            </div>
+            <div class="skill__bar">
+              <div class="value" style="width: 75%; height: 5px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="skillset__tools">
+        <p>VSCode</p>
+      </div>
+    </div>
+
+
+  </section>
+
+  <!-- My work -->
+  <section id="works" class="section__container">
+    <h1>My Works</h1>
+    <div class="work__categories">
+      <button class="category__btn">All</button>
+      <button class="category__btn">Data Analysis</button>
+      <button class="category__btn">NLP</button>
+      <button class="category__btn">ETC</button>
+    </div>
+    <div class="work__projects">
+      <a href="www.naver.com" class="project" target="blank" data-type="Contest">
+        <img class="project__img" src="image/projects/project2.png" alt="">
+        <div class="project__description">
+          <h3>Clone Coding</h3>
+          <span>Lorem...</span>
+        </div>
+      </a>
+
+      <a href="www.naver.com" class="project" target="blank" data-type="Contest">
+        <img class="project__img" src="image/projects/project3.png" alt="">
+        <div class="project__description">
+          <h3>Clone Coding</h3>
+          <span>Lorem...</span>
+        </div>
+      </a>
+
+      <a href="www.naver.com" class="project" target="blank" data-type="Contest">
+        <img class="project__img" src="image/projects/project4.png" alt="">
+        <div class="project__description">
+          <h3>Clone Coding</h3>
+          <span>Lorem...</span>
+        </div>
+      </a>
+
+      <a href="www.naver.com" class="project" target="blank" data-type="Contest">
+        <img class="project__img" src="image/projects/project5.png" alt="">
+        <div class="project__description">
+          <h3>Clone Coding</h3>
+          <span>Lorem...</span>
+        </div>
+      </a>
+
+      <a href="www.naver.com" class="project" target="blank" data-type="Contest">
+        <img class="project__img" src="image/projects/project6.png" alt="">
+        <div class="project__description">
+          <h3>Clone Coding</h3>
+          <span>Lorem...</span>
+        </div>
+      </a>
+
+      <a href="www.naver.com" class="project" target="blank" data-type="Contest">
+        <img class="project__img" src="image/projects/project7.png" alt="">
+        <div class="project__description">
+          <h3>Clone Coding</h3>
+          <span>Lorem...</span>
+        </div>
+      </a>
+
+      <a href="www.naver.com" class="project" target="blank" data-type="Contest">
+        <img class="project__img" src="image/projects/project8.png" alt="">
+        <div class="project__description">
+          <h3>Clone Coding</h3>
+          <span>Lorem...</span>
+        </div>
+      </a>
+
+  </section>
+
+  <!-- Activity -->
+  <section id="activity" class="section__container">
+    <h1>Activity</h1>
+    <ul>
+      <li>광주 인공지능사관학교 데이터시각화 우수상</li>
+      <li>광주형 인공지능문제해결 공모전 우수상</li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section__container">
+    <h1>Let's talk!</h1>
+    <h3>psh56750855@gmail.com</h3>
+    <i class="fab fa-github"></i>
+    <footer>2021 Park - All rights reserved</footer>
+  </section>
+  
+</body>
+</html>

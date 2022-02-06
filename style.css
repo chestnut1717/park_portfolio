@@ -1,0 +1,271 @@
+:root {
+  /* Color*/
+  --color-white: #ffffff;
+  --color-light-white: #eeeeee;
+  --color-dark-white: #bdbdbd;
+  --color-pink: #fe918d;
+  --color-dark-pink: #ff6863;
+  --color-black: #000000;
+  --color-dark-grey: #4d4d4d;
+  --color-grey: #616161;
+  --color-light-grey: #7c7979;
+  --color-dark-blue: #6666ff;
+  --color-blue: #73aace;
+  --color-yellow: #fff7d1;
+  --color-orange: #feb546;
+
+  /* Font Size */
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
+
+  /* Font Weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+
+  /* Size */
+  --size-border-radius: 4px;
+
+  /* Animation */
+  --animation-duration: 300ms;
+}
+
+/* Universal tags */
+/* 공통적으로 모든 tag에 적용할 속성 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Andada Pro", serif;
+  /* 마우스가 텍스트에 올라가도 변하지 않게 설정 */
+  cursor: default;
+}
+
+/* Typography */
+h1 {
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+  color: var(--color-black);
+  margin: 16px 0px;
+}
+h2 {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-black);
+  margin: 8px 0px;
+}
+h3 {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 8px 0px;
+}
+p {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 4px 0px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.section__container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px;
+}
+
+/* Navbar */
+
+#navbar {
+  display: flex;
+  background-color: var(--color-blue);
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+}
+
+.navbar__logo > * {
+  display: inline-block;
+  font-size: var(--font-medium);
+  font-weight: var(--weight-bold);
+  color: var(--color-white);
+}
+
+.navbar__logo > a {
+  margin-left: 9px;
+}
+
+.navbar__menu {
+  display: flex;
+}
+
+.navbar__menu {
+  cursor: pointer;
+}
+
+.navbar__menu__item {
+  margin: 0, 4px;
+  padding: 16px;
+  font-size: var(--font-small);
+  color: var(--color-white);
+  border-radius: var(--size-border-radius);
+  border: 1px solid transparent;
+}
+
+.navbar__menu__item:hover {
+  border: 1px solid var(--color-white);
+  background-color: var(--color-dark-blue);
+}
+
+/* Home */
+#home {
+  /* padding: 120px 40px 40px; */
+  text-align: center;
+  background-color: var(--color-pink);
+}
+
+.home__container {
+  display: flex;
+  padding: 20px;
+}
+
+.home__profile {
+  flex-basis: 66%;
+}
+
+.home__text {
+  flex-basis: 34%;
+  border-left: 2px solid;
+}
+
+.home__profile > img {
+  width: 50%;
+  /* height: 50%; */
+}
+
+/* About */
+
+#about {
+  text-align: center;
+}
+
+.about__majors {
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 0px;
+}
+
+.major__icon {
+  width: 170px;
+  height: 170px;
+  line-height: 170px;
+  font-size: 70px;
+  margin: auto;
+  border: 1px solid var(--color-blue);
+  border-radius: 50%;
+  margin-bottom: 16px;
+  color: var(--color-blue);
+}
+
+.major__title,
+.major__description {
+  color: var(--color-dark-grey);
+}
+
+.major__description {
+  font: var(--font-small);
+}
+
+/* icon class element에 닿았을 때, i만 변하게 함 */
+.major__icon:hover i {
+  transform: scale(1.1) rotate(-30deg);
+  transition: all var(--animation-duration) ease;
+  color: var(--color-pink);
+}
+
+.career__container {
+  display: flex;
+  text-align: start;
+  margin-bottom: 8px;
+}
+
+.career__img {
+  width: 50px;
+  height: 50px;
+}
+
+.career__detail {
+  margin-left: 10px;
+}
+
+.career__detail > p {
+  font-size: 16px;
+  color: var(--color-grey);
+}
+
+/* Skills */
+#skills {
+  text-align: center;
+}
+
+.skillset__skills {
+  background-color: var(--color-light-grey);
+  display: flex;
+}
+
+.skillset__tools {
+  background-color: var(--color-dark-grey);
+}
+
+.skill__menu {
+  background-color: var(--color-blue);
+  margin: 0px;
+  padding-left: 0px;
+}
+
+.skill__menu__item {
+  padding: 15px;
+  cursor: pointer;
+}
+
+.skill__menu__item.active {
+  background-color: var(--color-yellow);
+}
+
+.skill__menu__item:hover {
+  background-color: var(--color-yellow);
+}
+
+.skill__graph {
+  width: 90%;
+  margin: auto;
+}
+
+.skill__bar {
+  margin: 10px;
+}
+
+.skill__description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill__bar > .value {
+  background-color: var(--color-yellow);
+}
+
+.skill.invisible {
+  display: none;
+}
