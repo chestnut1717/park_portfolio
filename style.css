@@ -147,15 +147,13 @@ section {
   padding: 20px;
 }
 
-.home__profile {
-}
-
 .home__text {
 }
 
 .home__profile > img {
-  width: 50%;
-  /* height: 50%; */
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
 }
 
 .home__text > span.typing {
@@ -165,6 +163,28 @@ section {
 
 .text__typing {
   display: none;
+}
+
+/* Profile */
+#profile {
+  padding: 0px;
+  background-color: var(--color-white);
+}
+
+#profile {
+  position: relative;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.picture--circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  top: -100%;
 }
 
 /* About */

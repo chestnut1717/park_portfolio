@@ -17,17 +17,16 @@ if(typingBool==false){ // 타이핑이 진행되지 않았다면
 function typing(){
   var typingText = typingTextList[liIndex];
   var typedText = document.querySelector(".typing").innerText;
-  console.log(typingText);
-  if(typingIdx<typingText.length){ // 타이핑될 텍스트 길이만큼 반복 
+
+  if (typingIdx<typingText.length){ // 타이핑될 텍스트 길이만큼 반복 
     typedText = typedText + typingText[typingIdx]; // 한글자씩 이어준다.
     document.querySelector('.typing').innerText = typedText;
     typingIdx++; 
-
-   } else{ //한문장이끝나면
+   } else { //한문장이끝나면
      //다음문장으로.. 마지막문장이면 다시 첫번째 문장으로 
-     if(liIndex>=liLength-1){
+     if (liIndex>=liLength-1){
        liIndex=0;
-     }else{
+     } else {
        liIndex++; 
      }
      
