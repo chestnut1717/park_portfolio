@@ -68,7 +68,6 @@ h3 {
 p {
   font-size: var(--font-regular);
   font-weight: var(--weight-regular);
-  color: var(--color-black);
   margin: 4px 0px;
 }
 
@@ -93,11 +92,19 @@ section {
   margin: auto;
 }
 
+.highlight--skyblue {
+  color: #9daaf2;
+}
+
+.highlight--orange {
+  color: #ff6a3d;
+}
+
 /* Navbar */
 
 #navbar {
   display: flex;
-  background-color: var(--color-blue);
+  background-color: #1a2238;
   justify-content: space-between;
   align-items: center;
   padding: 8px;
@@ -125,6 +132,7 @@ section {
 .navbar__menu__item {
   margin: 0, 4px;
   padding: 16px;
+  font-family: "Raleway", san-serif;
   font-size: var(--font-small);
   color: var(--color-white);
   border-radius: var(--size-border-radius);
@@ -132,7 +140,7 @@ section {
 }
 
 .navbar__menu__item:hover {
-  border: 1px solid var(--color-white);
+  border: 1px solid var(--color-black);
   background-color: var(--color-dark-blue);
 }
 
@@ -140,25 +148,53 @@ section {
 #home {
   /* padding: 120px 40px 40px; */
   text-align: center;
-  background-color: var(--color-pink);
+  padding: 0px;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .home__container {
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 500px;
+  background-color: #1a2238;
+  padding: 12px;
 }
 
 .home__text {
+  height: 200px;
 }
 
-.home__profile > img {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
+.home__text > p {
+  text-align: center;
+  font-size: var(--font-large);
 }
 
-.home__text > span.typing {
+.home__text > .text__plain {
+  color: var(--color-white);
+}
+
+.home__text > .typing {
+  min-width: 2px;
+  min-height: var(--font-large);
   display: inline-block;
-  border-right: 1px solid var(--color-black);
+}
+
+.cursor {
+  display: inline-block;
+  height: 40px;
+  border-right: 2px solid var(--color-white);
+}
+
+.cursor.blink {
+  animation: blinker 1s step-end infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }
 
 .text__typing {
@@ -185,6 +221,7 @@ section {
   display: block;
   position: absolute;
   top: -100%;
+  border: 2px solid var(--color-black);
 }
 
 .home__text > span.typing {
@@ -259,7 +296,7 @@ section {
 /* Skills */
 #skills {
   text-align: center;
-  background-color: var(--color-pink);
+  background-color: #ff6a3d;
 }
 
 .skillset {
@@ -425,7 +462,7 @@ section {
 /* Activity */
 #activity {
   text-align: center;
-  background-color: var(--color-yellow);
+  background-color: var(--color-light-white);
 }
 
 .activity__list {
