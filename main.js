@@ -30,7 +30,6 @@ function typing(){
        liIndex=0;
      } else {
        liIndex++; 
-       console.log(liIndex);
      }
      
      //다음문장을 타이핑하기위한 셋팅
@@ -43,7 +42,7 @@ function typing(){
          setTimeout(function(){
             document.querySelector('.typing').innerText = "";
             tyInt = setInterval(typing,110);
-         },900);
+         },1200);
     } 
 }  
 
@@ -86,4 +85,29 @@ skillMenu.addEventListener('click', (e) => {
   });
 
 }
+);
+
+
+// My Work
+
+// hover and image scaling effect
+const outer = document.querySelector(".work__projects");
+const inners = document.querySelectorAll(".project");
+
+
+outer.addEventListener('click', (e) => {
+
+  console.log(e.target);
+  console.log(e.target.parentNode);
+	inners.forEach((inner) => {
+    // project 자신이거나, project__img이거나, project description 산하의 모든 것들
+    if (e.target ===inner | e.target.parentNode === inner | e.target.parentNode.parentNode == inner) {
+    	inner.classList.toggle("bigger");
+    } else if (e.target === outer) {
+    	return;
+    } else{
+    	inner.classList.toggle("noClick");
+    }
+  });
+	}
 );
