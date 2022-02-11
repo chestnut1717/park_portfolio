@@ -465,7 +465,6 @@ section {
 .work__projects {
   display: flex;
   flex-direction: column;
-  background-color: white;
 }
 
 .project {
@@ -474,22 +473,50 @@ section {
   flex-direction: column;
   /* width: 800px;
   height: 550px; */
+  margin: 5px 0;
   width: 50vw;
   height: 31.5vw;
-  background-color: orange;
-  border: 1px solid white;
   transition: all 300ms ease-out;
+  cursor: pointer;
 }
 
+.project:hover {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake var(--animation-duration);
+}
+
+@keyframes shake {
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(1deg);
+  }
+}
 .project__img {
-  /* width: 100%; */
-
-  background-color: var(--color-skyblue);
+  height: 27vw;
 }
 
+.project__description {
+  height: 4.5vw;
+  background-color: var(--color-light-cyan);
+}
+
+.project__description > h3 {
+  font-size: var(--font-large);
+}
+/* Project Click Effect */
 .project.noClick {
-  opacity: 0.2;
+  opacity: 0.3;
   z-index: 1;
+}
+
+.project:nth-child(odd) {
+  align-self: start;
+}
+
+.project:nth-child(even) {
+  align-self: end;
 }
 
 .project:nth-child(odd).bigger {
@@ -502,27 +529,44 @@ section {
   transform-origin: top right;
 }
 
-.project:last-child.bigger.inner:nth-child(odd).bigger {
+.project:last-child.bigger.project:nth-child(odd).bigger {
   transform: scale(var(--scale-mid));
   transform-origin: bottom left;
 }
 
-.project:last-child.bigger.inner:nth-child(even).bigger {
+.project:last-child.bigger.project:nth-child(even).bigger {
   transform: scale(var(--scale-mid));
   transform-origin: bottom right;
-}
-
-.project:nth-child(odd) {
-  align-self: start;
-}
-
-.project:nth-child(even) {
-  align-self: end;
 }
 
 .project.bigger {
   opacity: 1;
   z-index: 2;
+}
+
+.project__description .title {
+  display: block;
+  height: 100%;
+  margin: 0;
+  padding: 8px;
+}
+
+.content {
+  display: block;
+  position: relative;
+  transition: all 300ms linear;
+  height: 0px;
+  opacity: 0;
+  top: 0;
+  margin-top: 0;
+  visibility: hidden;
+}
+
+.content.visible {
+  background: var(--color-light-cyan);
+  height: 150px;
+  opacity: 1;
+  visibility: visible;
 }
 
 /* .work__projects {

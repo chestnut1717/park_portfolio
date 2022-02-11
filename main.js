@@ -90,19 +90,20 @@ skillMenu.addEventListener('click', (e) => {
 
 // My Work
 
-// hover and image scaling effect
+// click and image scaling effect
 const outer = document.querySelector(".work__projects");
 const inners = document.querySelectorAll(".project");
 
 
+
 outer.addEventListener('click', (e) => {
 
-  console.log(e.target);
-  console.log(e.target.parentNode);
 	inners.forEach((inner) => {
     // project 자신이거나, project__img이거나, project description 산하의 모든 것들
     if (e.target ===inner | e.target.parentNode === inner | e.target.parentNode.parentNode == inner) {
     	inner.classList.toggle("bigger");
+      a = inner.querySelector(".content");
+      a.classList.toggle('visible');
     } else if (e.target === outer) {
     	return;
     } else{
@@ -111,3 +112,6 @@ outer.addEventListener('click', (e) => {
   });
 	}
 );
+
+
+
