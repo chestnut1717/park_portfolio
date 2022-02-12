@@ -390,7 +390,7 @@ section {
 }
 
 .attributes__tool {
-  flex-basis: 65%;
+  flex-basis: 60%;
 }
 
 .attributes__title,
@@ -402,7 +402,7 @@ section {
 
 .attributes__etc {
   background-color: var(--color-light-cyan);
-  flex-basis: 35%;
+  flex-basis: 40%;
 }
 
 /* My Works */
@@ -420,18 +420,20 @@ section {
 }
 
 .category__btn {
-  border: 1px solid var(--color-dark-white);
+  border: 1px solid transparent;
+  border-radius: var(--size-border-radius);
   padding: 8px 48px;
   /* width: 210px; */
   background-color: transparent;
   font-size: var(--font-regular);
   position: relative;
+  font-family: "Ubuntu";
 }
 
 .category__count {
   display: inline-block;
   position: absolute;
-  background-color: var(--color-orange);
+  background-color: var(--color-blue);
   border-radius: 50%;
   width: 24px;
   height: 24px;
@@ -445,7 +447,7 @@ section {
 
 .category__btn.selected,
 .category__btn:hover {
-  background-color: var(--color-pink);
+  background-color: var(--color-dark-navy);
   color: var(--color-white);
 }
 .category__btn.selected .category__count,
@@ -568,53 +570,6 @@ section {
   opacity: 1;
   visibility: visible;
 }
-
-/* .work__projects {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.project {
-  position: relative;
-  background-color: var(--color-light-white);
-  width: 280px;
-  height: 250px;
-  margin: 2px;
-}
-
-.project__img {
-  height: 100%;
-}
-
-.project__description {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  transition: all var(--animation-duration) ease-in;
-  transform: translateY(-10px);
-  line-height: 100%;
-}
-
-.project__description > * {
-  color: var(--color-white);
-}
-
-.project__description > h3 {
-  margin-bottom: 20px;
-}
-
-.project:hover .project__description {
-  opacity: 0.8;
-  background-color: var(--color-black);
-  transform: translateY(0px);
-} */
 
 /* Activity */
 #activity {
