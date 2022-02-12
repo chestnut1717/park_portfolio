@@ -147,8 +147,8 @@ outer.addEventListener('click', (e) => {
     // project 자신이거나, project__img이거나, project description 산하의 모든 것들
     if (e.target ===inner | e.target.parentNode === inner | e.target.parentNode.parentNode == inner) {
     	inner.classList.toggle("bigger");
-      a = inner.querySelector(".content");
-      a.classList.toggle('visible');
+      const projectContent = inner.querySelector(".content");
+      projectContent.classList.toggle('visible');
     } else if (e.target === outer) {
     	return;
     } else{
