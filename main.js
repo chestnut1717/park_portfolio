@@ -1,10 +1,6 @@
 'use strict';
 
 // Transparent Navbar
-function scrollIntoView(selector) {
-  const scrollTo = document.querySelector(selector);
-  scrollTo.scrollIntoView({'behavior' : 'smooth'});
-}
 
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
@@ -159,4 +155,23 @@ outer.addEventListener('click', (e) => {
 );
 
 
-// hello2
+// arrow up
+
+const homeHeight = home.getBoundingClientRect().height;
+const arrowUp = document.querySelector('.arrow-up');
+document.addEventListener('scroll', () => {
+  if (window.scrollY > homeHeight / 2) {
+    arrowUp.classList.add('visible');
+  } else {
+    arrowUp.classList.remove('visible');
+  }
+});
+
+arrowUp.addEventListener('click', () => {
+  scrollIntoView('#home');
+});
+
+function scrollIntoView(selector) {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({'behavior' : 'smooth'});
+}

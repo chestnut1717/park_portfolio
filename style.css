@@ -92,7 +92,10 @@ a {
 }
 
 button {
+  background: transparent;
   cursor: pointer;
+  border: none;
+  outline: none;
 }
 
 section {
@@ -665,4 +668,24 @@ section {
 
 .contact__links i:hover {
   transform: scale(1.1);
+}
+
+.arrow-up {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 70px;
+  height: 70px;
+  font-size: 50px;
+  color: var(--color-white);
+  background-color: var(--color-cyan);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--animation-duration) ease-in;
+}
+
+.arrow-up.visible {
+  opacity: 1;
+  pointer-events: auto;
 }
