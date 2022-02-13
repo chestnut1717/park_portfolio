@@ -41,6 +41,11 @@
       <li class="navbar__menu__item" data-link="#activity">Awards</li>
       <li class="navbar__menu__item" data-link="#contact">Contact</li>
     </ul>
+
+    <!-- toggle button -->
+    <button class="navbar__toggle-btn">
+      <i class="fas fa-bars"></i>
+    </button>
   </nav>
 
   <!-- Home -->
@@ -277,10 +282,10 @@
       <h1>My Works</h1>
       <h3>project</h3>
       <div class="work__categories">
-        <button class="category__btn selected">All<span class="category__count">8</span></button>
-        <button class="category__btn">Data Analysis<span class="category__count">3</span></button>
-        <button class="category__btn">NLP<span class="category__count">3</span></button>
-        <button class="category__btn">ETC<span class="category__count">2</span></button>
+        <button class="category__btn selected" data-filter="*">All<span class="category__count">8</span></button>
+        <button class="category__btn" data-filter="DA">Data Analysis<span class="category__count">3</span></button>
+        <button class="category__btn" data-filter="NLP">NLP<span class="category__count">3</span></button>
+        <button class="category__btn" data-filter="ETC">ETC<span class="category__count">2</span></button>
       </div>
   
       <div class="work__projects">
