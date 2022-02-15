@@ -63,7 +63,7 @@ h1 {
   font-size: var(--font-large);
   font-weight: var(--weight-bold);
   color: var(--color-black);
-  margin: 16px 0px;
+  margin: 24px 0px;
 }
 h2 {
   font-size: var(--font-medium);
@@ -342,7 +342,7 @@ section {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 10%;
+  height: 350px;
 }
 
 .skillset__skills {
@@ -369,8 +369,13 @@ section {
   flex-grow: 1;
   cursor: pointer;
   margin: 0px;
-  padding: 15px;
+  padding: 10px;
   color: var(--color-dark-navy);
+  text-align: center;
+  /* Centering */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .skill__menu__item.active,
@@ -382,14 +387,23 @@ section {
 .skill__graph {
   width: 90%;
   color: var(--color-white-blue);
+  display: flex;
+  flex-direction: column;
 }
-.skill__title {
-  margin-top: 0;
+.skill__title,
+.attributes__title {
+  margin-top: 10px;
   padding: 12px 0;
+  font-size: var(--font-medium);
   color: var(--color-white-blue);
 }
 
+.skill__container {
+  /* margin: auto 12px; */
+}
+
 .skill {
+  margin: 20px 0;
   padding: 10px 30px;
 }
 
