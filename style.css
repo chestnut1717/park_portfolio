@@ -754,6 +754,11 @@ section {
     --font-small: 14px;
     --font-micro: 12px;
   }
+
+  .section__container:not(.home__container) {
+    margin: 0;
+  }
+
   .navbar__toggle-btn {
     display: block;
     top: 12px;
@@ -801,8 +806,13 @@ section {
     margin: 30px;
   }
 
+  #skills {
+    height: 850px;
+  }
+
   .skillset {
     flex-direction: column;
+    /* overflow-y:scroll; */
   }
 
   .skillset__skills {
@@ -818,13 +828,87 @@ section {
     min-height: 250px;
   }
 
+  /* Visualization 정렬 */
+  .skill__description > span {
+    text-align: left;
+  }
+
   .category__btn {
     margin: 4px 0;
     width: 80%;
   }
 
-  .project {
-    flex-grow: 1;
+  .work__projects > .project {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin: 12px 0;
+    width: 300px;
+    height: 216px;
+    transition: all 300ms ease-out;
+    cursor: pointer;
+    font-family: "Nanum Gothic", sans-serif;
+    background-color: var(--color-light-white);
+    border-radius: 8px;
+    box-shadow: -3px -2px 2px 1px var(--color-light-white);
+  }
+  .work__projects > .project.invisible {
+    display: None;
+  }
+  .work__projects > .project__img {
+    width: 290px
+    height: 200px;
+    background-color: var(--color-light-white);
+  } 
+  
+  
+  
+  .project > .project__description .title {
+    display: block;
+    width: 100%;
+    font-size: var(--font-medium);
+    margin: 0;
+    font-weight: var(--weight-semi-bold);
+  }
+  
+  .project__description > .content {
+    font-size: var(--font-micro);
+  }
+  
+  /* Project Click Effect */
+
+
+  .work__projects > .project.bigger {
+    opacity: 1;
+    transform: scale(var(--scale-mid));
+    transform-origin: center;
+    z-index: 2;
+  }
+
+  .project__description > .content {
+    display: block;
+    position: relative;
+    transition: all 300ms linear;
+    height: 0px;
+    opacity: 0;
+    top: 0;
+    margin-top: 0;
+    width: 100%;
+    visibility: hidden;
+  }
+  
+  .project__description > .content.visible {
+    background: var(--color-light-white);
+    height: 6vw;
+    opacity: 1;
+    visibility: visible;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-shadow: -3px 2px 2px 1px var(--color-light-white);
+  }
+  
+  .project__description > .content i:hover {
+    color: var(--color-deep-red);
   }
 
   .testimonial {
