@@ -166,6 +166,7 @@ section {
 
 .navbar__menu {
   display: flex;
+  padding-left: 0;
 }
 
 .navbar__menu {
@@ -768,6 +769,7 @@ section {
   .navbar__menu.open {
     background-color: var(--color-dark-navy);
     display: block;
+    padding-left: 0;
   }
 
   #navbar {

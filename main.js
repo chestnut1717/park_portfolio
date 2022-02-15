@@ -146,13 +146,15 @@ const inners = document.querySelectorAll(".project");
 outer.addEventListener('click', (e) => {
 
 	inners.forEach((inner) => {
-    // project 자신이거나, project__img이거나, project description 산하의 모든 것들
-    if (e.target ===inner | e.target.parentNode === inner | e.target.parentNode.parentNode == inner) {
+    console.log();
+    // project 자신이거나, project__img이거나, project description 산하의 모든 것들(나중에 수정해야함)
+    if (e.target ===inner | e.target.parentNode === inner | e.target.parentNode.parentNode == inner | e.target.parentNode.parentNode.parentNode == inner | e.target.parentNode.parentNode.parentNode.parentNode == inner) {
     	inner.classList.toggle("bigger");
       const projectContent = inner.querySelector(".content");
       projectContent.classList.toggle('visible');
     } else if (e.target === outer) {
     	return;
+
     } else{
     	inner.classList.toggle("noClick");
     }
