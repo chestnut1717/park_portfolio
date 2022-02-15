@@ -83,11 +83,14 @@
     <div class="section__container">
       <h1>About Me</h1>
     <div class="about__text">
-      안녕하세요, 박선홍 입니다.<br>
-      저는 한국외대에서 국제통상학을 전공하고 있으며 SoftwareW&AI 학과에서 전산학과 데이터 분석을 공부하고 있습니다.<br>
-      항상 도전하는 성격입니다<br>
-      데이터를 분석에 매료되어 현재는 ~하고 있습니다.<
-      주 언어는 파이썬이며
+      <p>
+        안녕하세요, 박선홍 입니다.<br>
+        저는 한국외대에서 국제통상학을 전공하고 있으며 SoftwareW&AI 학과에서 전산학과 데이터 분석을 공부하고 있습니다.<br>
+        항상 도전하는 성격입니다<br>
+        데이터를 분석에 매료되어 현재는 ~하고 있습니다.<
+        주 언어는 파이썬이며
+      </p>
+
     </div>
 
     <div class="about__majors">
@@ -185,7 +188,7 @@
     
               <div class="skill" data-type="Analysis">
                 <div class="skill__description">
-                  <span>Visualization Lib</span>
+                  <span>Visualization Lib (Seaborn, plotly)</span>
                   <span>70%</span>
                 </div>
                 <div class="skill__bar">
@@ -269,7 +272,7 @@
           <div class="attributes__etc">
             <h3 class="attributes__title">ETC</h3>
             <p>Git</p>
-            <p>Seaching</p>
+            <p>Googling</p>
           </div>
         </div>
       </div>
@@ -283,51 +286,90 @@
       <h1>My Works</h1>
       <h3>project</h3>
       <div class="work__categories">
-        <button class="category__btn selected" data-filter="*">All<span class="category__count">8</span></button>
+        <button class="category__btn selected" data-filter="*">All<span class="category__count">5</span></button>
         <button class="category__btn" data-filter="DA">Data Analysis<span class="category__count">3</span></button>
-        <button class="category__btn" data-filter="NLP">NLP<span class="category__count">3</span></button>
-        <button class="category__btn" data-filter="ETC">ETC<span class="category__count">2</span></button>
+        <button class="category__btn" data-filter="NLP">NLP<span class="category__count">1</span></button>
+        <button class="category__btn" data-filter="ETC">ETC<span class="category__count">1</span></button>
       </div>
   
       <div class="work__projects">
 
+
         <div class="project" data-type="DA">
-          <img class="project__img" src="image/projects/DA-covid.png">
+          <div class="project__img">
+            <img src="image/projects/DA-covid.png" alt="">
+          </div>
           <div class="project__description">
-            <h3 class="title">title</h3>
-            <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos modi sit laboriosam labore placeat adipisci eligendi, aut totam dicta nesciunt exercitationem voluptatum laborum in atque soluta dolorum ducimus ex natus!</p>
+            <h3 class="title">코로나19 유행 후 업종별 소비패턴변화 시각화</h3>
+            <p class="content"><b>plotly와</b> <b>streamlit</b>을 활용한 대시보드 제작 및 인사이트 도출 <br>
+               20-21년 신용카드 사용 데이터 활용<br>
+               <a href="https://github.com/chestnut1717/Comp-Covid-visualization" target="blank" class="icon">
+                <i class="fab fa-github" style="font-size: 1.5vw;"></i>
+              </a></p>
+
           </div>
         </div>
 
         <div class="project" data-type="DA">
-          <img class="project__img" src="image/projects/DA-CJ.png">
+          <div class="project__img">
+            <img src="image/projects/DA-CJ.png" alt="">
+          </div>
           <div class="project__description">
-            <h3 class="title">title</h3>
-            <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos modi sit laboriosam labore placeat adipisci eligendi, aut totam dicta nesciunt exercitationem voluptatum laborum in atque soluta dolorum ducimus ex natus!</p>
+            <h3 class="title">이벤트의 영향에 따른 택배 물동량 예측 모델 제작</h3>
+            <p class="content">CJ 대한통운 빅데이터 경진대회 <b>상품/물량 예측 트랙</b> 참가 <br>
+               비정기적인 이벤트에 대한 시계열 모델의 한계 파악<br>
+              <b>이벤트 일정을 설명변수로 하는 XGBoost 모델</b> 제작<br>
+              <a href="https://github.com/chestnut1717/Comp-CJ-volume-prediction" target="blank" class="icon">
+                <i class="fab fa-github" style="font-size: 1.5vw;"></i>
+              </a>
+            </p>              
           </div>
         </div>
 
         <div class="project" data-type="DA">
-          <img class="project__img" src="image/projects/DA-dacon_gas.png">
+          <div class="project__img">
+            <img src="image/projects/DA-dacon_gas.png" alt="">
+          </div>
           <div class="project__description">
-            <h3 class="title">title</h3>
-            <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos modi sit laboriosam labore placeat adipisci eligendi, aut totam dicta nesciunt exercitationem voluptatum laborum in atque soluta dolorum ducimus ex natus!</p>
+            <h3 class="title">회귀분석과 LSTM을 통한 가스공급량 예측</h3>
+            <p class="content">한국가스공사 주관 DACON 대회 참가<br>
+            <b>LSTM</b>과 <b>선형회귀</b> 기반 분석을 통해 시간단위 가스 예측 시도<br>
+            <a href="https://github.com/chestnut1717/DACON-gas-prediction" target="blank" class="icon">
+              <i class="fab fa-github" style="font-size: 1.5vw;"></i>
+            </a>
+          </p>
+
           </div>
         </div>
 
         <div class="project" data-type="NLP">
-          <img class="project__img" src="image/projects/NLP-recipe.png">
+          <div class="project__img">
+            <img src="image/projects/NLP-recipe.png" alt="">
+          </div>
           <div class="project__description">
-            <h3 class="title">title</h3>
-            <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos modi sit laboriosam labore placeat adipisci eligendi, aut totam dicta nesciunt exercitationem voluptatum laborum in atque soluta dolorum ducimus ex natus!</p>
+            <h3 class="title">리사야 냉장고를 부탁해</h3>
+            <p class="content"><b>이미지 인식과</b> <b>TF-IDF모델</b>을 활용한 식재료 기반 음식 추천 프로그램<br>
+            영수증 이미지 인식을 통해 냉장고 재고관리 용이, 기존 레시피 프로그램보다 더 알맞은 레시피 추천<br>
+            <a href="https://github.com/chestnut1717/recipe-recommendation" target="blank" class="icon">
+              <i class="fab fa-github" style="font-size: 1.5vw;"></i></p>
+
+            </a>
           </div>
         </div>
 
         <div class="project" data-type="ETC">
-          <img class="project__img" src="image/projects/FRONT-portfolio.png">
+          <div class="project__img">
+            <img src="image/projects/FRONT-portfolio.png" alt="">
+          </div>
           <div class="project__description">
-            <h3 class="title">title</h3>
-            <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos modi sit laboriosam labore placeat adipisci eligendi, aut totam dicta nesciunt exercitationem voluptatum laborum in atque soluta dolorum ducimus ex natus!</p>
+            <h3 class="title">포트폴리오 웹사이트 제작</h3>
+            <p class="content"><b>HTML, pure CSS, vanila JS</b>만으로 포트폴리오 웹사이트 구축<br>
+              <b>BEM</b> 방법론을 통해 CSS 클래스 관리<br>
+              반응형 웹사이트를 제작하려 노력<br>
+              <a href="https://github.com/chestnut1717/park_portfolio" target="blank" class="icon">
+                <i class="fab fa-github" style="font-size: 1.5vw;"></i></p>
+
+            </a>
           </div>
         </div>
   
@@ -370,6 +412,8 @@
   <button class="arrow-up">
     <i class="fas fa-arrow-up"></i>
   </button>
-  
+
+  </div>
+
 </body>
 </html>
